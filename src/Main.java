@@ -36,14 +36,10 @@ public class Main {
         int[][] f = new int[5][5];
         for (int row = 0; row < f.length; row++) {
             for (int col = 0; col < f[0].length; col++) {
-                if (row == 0) {
+                if (row == 0 || col==0) {
                     f[row][col] = 1;
                 } else if (row == 2) {
                     f[row][col] = 1;
-                }
-
-                if (col==0) {
-                    f[row][col]=1;
                 }
             }
         }
