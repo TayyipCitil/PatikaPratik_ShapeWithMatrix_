@@ -32,29 +32,25 @@ public class Main {
         System.out.println();
 
 
-        // yıldızlardan f yazdıralım 0. ve 2. satır ve 0.stun yıldız olcak
-        int[][] f = new int[5][5];
+        // yıldızlardan f yazdıralım 0. ve 2. satırlar ve 0.stun yıldız olcak
+        String[][] f = new String[5][5];
         for (int row = 0; row < f.length; row++) {
             for (int col = 0; col < f[0].length; col++) {
-                if (row == 0 || col==0) {
-                    f[row][col] = 1;
+                if (row == 0 || col == 0) {
+                    f[row][col] = "*";
                 } else if (row == 2) {
-                    f[row][col] = 1;
+                    f[row][col] = "*";
+                }else {
+                    f[row][col]=" ";
                 }
             }
         }
-        for (int[] row:f){
-            for(int col:row){
-               switch (col){
-                   case 0:
-                       System.out.print(" ");
-                       break;
-                   case 1:
-                       System.out.print("*");
-                       break;
-               }
+        for (String[] row : f) {
+            for (String col : row) {
+                System.out.print(col);
             }
             System.out.println();
         }
+
     }
 }
